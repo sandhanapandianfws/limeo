@@ -1,0 +1,10 @@
+en:
+  hello: "Hello world"
+  user:
+    registration:
+      invalid:
+        email: "Email is invalid"
+      empty:
+        first_name: "Full name cannot be empty"
+        password: "Password cannot be empty"
+        usertype: "Usertype cannot be empty"

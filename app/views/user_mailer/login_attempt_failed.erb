@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Dear <%= @user.full_name %>,</p>
+<p>We noticed a failed login attempt to your account on <%= Time.zone.now.strftime("%A, %B %d, %Y at %I:%M %p") %>.</p>
+
+<p>
+  If this wasn't you, please reset your password immediately to secure your account.
+</p>
+<p>
+  If you need assistance, feel free to contact us at support@limeo.com.
+</p>
+<p>Always open to help you.</p>
+<br>
+<p>Regards</p>
+<p>
+  <b>Limeo</b><br />
+</p>
+</body>
+</html>
+

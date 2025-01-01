@@ -33,7 +33,6 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
-    # Example: Fetch locale from `Accept-Language` header or default to English
     I18n.locale = extract_locale_from_header || I18n.default_locale
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_12_18_092012) do
+ActiveRecord::Schema.define(version: 2025_01_01_053527) do
 
   create_table "articles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 2024_12_18_092012) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
+  end
+
+  create_table "course_subscriptions", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id", "user_id"], name: "index_course_subscriptions_on_course_id_and_user_id", unique: true
+    t.index ["course_id"], name: "index_course_subscriptions_on_course_id"
+    t.index ["user_id"], name: "index_course_subscriptions_on_user_id"
   end
 
   create_table "courses", charset: "utf8mb3", force: :cascade do |t|
@@ -66,6 +76,18 @@ ActiveRecord::Schema.define(version: 2024_12_18_092012) do
     t.index ["updatedby_id"], name: "index_courses_on_updatedby_id"
   end
 
+  create_table "lectures", charset: "utf8mb3", force: :cascade do |t|
+    t.string "title"
+    t.integer "content_type"
+    t.string "content_url"
+    t.bigint "section_id", null: false
+    t.integer "createdby_id"
+    t.integer "updatedby_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["section_id"], name: "index_lectures_on_section_id"
+  end
+
   create_table "sections", charset: "utf8mb3", force: :cascade do |t|
     t.string "title"
     t.bigint "course_id", null: false
@@ -95,14 +117,18 @@ ActiveRecord::Schema.define(version: 2024_12_18_092012) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.integer "usertype"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "comments", "articles"
+  add_foreign_key "course_subscriptions", "courses"
+  add_foreign_key "course_subscriptions", "users"
   add_foreign_key "courses", "categories", column: "primarycategory_id"
   add_foreign_key "courses", "categories", column: "primarysubcategory_id"
   add_foreign_key "courses", "users", column: "author_id"
   add_foreign_key "courses", "users", column: "createdby_id"
   add_foreign_key "courses", "users", column: "updatedby_id"
+  add_foreign_key "lectures", "sections"
   add_foreign_key "sections", "courses"
   add_foreign_key "sections", "users", column: "createdby_id"
   add_foreign_key "sections", "users", column: "updatedby_id"

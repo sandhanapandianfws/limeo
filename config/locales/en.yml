@@ -1,10 +1,31 @@
 en:
   hello: "Hello world"
+  generic:
+    error:
+      server_error: "Something went wrong"
   user:
+    login:
+      error:
+        email_not_verified: "Please verify your email to login"
+        invalid_email_password: "Invalid email or password"
     registration:
+      success_msg: "User registered successfully"
       invalid:
         email: "Email is invalid"
       empty:
         first_name: "Full name cannot be empty"
         password: "Password cannot be empty"
         usertype: "Usertype cannot be empty"
+      dberror:
+        duplicate:
+          email: "Email already exists"
+          unique_violation: "Unique constraint violated"
+      unexpected_error: "Something went wrong"
+    verify_email:
+      error:
+        code_missing: "Verification code is missing"
+        invalid_code: "Invalid verification code"
+        email_already_verified: "Email already verified"
+        save_failed: "Failed to update user"
+      success: "Email successfully verified"
+

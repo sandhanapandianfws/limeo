@@ -7,6 +7,10 @@ class User < ApplicationRecord
 
   enum usertype: { Admin: 0, User: 1, Author: 2 }
 
+
+  has_many :course_subscriptions, dependent: :destroy
+  has_many :courses, through: :course_subscriptions
+
   # Callbacks - Starts Here
   before_create :generate_email_verification_code
 

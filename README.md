@@ -75,5 +75,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-For any queries, contact the project maintainer at [maintainer@example.com].
-

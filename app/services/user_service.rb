@@ -42,6 +42,8 @@ class UserService
 
     if user.save
       UserMailer.verification_email(user).deliver_now
+      user.password_digest = nil
+      user.email_verification_code = nil
       { success: true, message: I18n.t('user.registration.success_msg'), user: user }
     else
       { success: false, errors: user.errors.full_messages }

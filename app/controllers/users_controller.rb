@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if result[:success]
       render json: { message: result[:message], user: result[:user] }, status: :created
     else
-      render json: { errors: result[:errors] }, status: :unprocessable_entity
+      render json: { errors: result[:errors] }, status: :bad_request
     end
   end
 

@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
 
   before_action :set_course, only: %i[show update destroy create_section get_sections]
 
-  before_action :set_section, only: %i[create_lecture, destroy_section]
+  before_action :set_section, only: %i[create_lecture destroy_section]
 
   before_action :authenticate_request
 
@@ -22,10 +22,13 @@ class CoursesController < ApplicationController
 
   # POST /courses
   def create
+    user = User.find_by(id: course_params[:author_id])
+    if user == nil
+      render json: { success: false, errors: ["Author id is invalid"] }, status: :bad_request and return
+    end
     course = Course.new(course_params)
-    p @current_user
-    course.createdby_id = @current_user.id
-    course.updatedby_id = @current_user.id
+    course.author = user
+    course.updated_by = course.created_by = @current_user
     if course.save
       render json: course, status: :created
     else

@@ -61,8 +61,8 @@ The API endpoints for this project can be tested using the Postman collection pr
    rails server
    ```
 
-6. **Access the Application**:
-   Open your browser and navigate to `http://localhost:3000`.
+6. **Access the Application Server**:
+   API server runs at `http://localhost:4009`.
 
 ## API Documentation
 - The Postman collection provided includes all available endpoints. Import it into Postman for testing and exploration.

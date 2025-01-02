@@ -23,6 +23,11 @@
 								"key": "x-request-id",
 								"value": "",
 								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "ta",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -107,6 +112,32 @@
 							"path": [
 								"users",
 								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4009/users/verifyEmail?code=a9c80fe2-a4a8-4c13-a77a-93665f320324",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4009",
+							"path": [
+								"users",
+								"verifyEmail"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "a9c80fe2-a4a8-4c13-a77a-93665f320324"
+								}
 							]
 						}
 					},
@@ -276,6 +307,64 @@
 					"name": "Sections",
 					"item": [
 						{
+							"name": "Lecture",
+							"item": [
+								{
+									"name": "Create Lecture",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ACCESS_TOKEN}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "x-request-id",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"lecture\": {\n        \"title\": \"Course structure, overview and bestway to use this course\",\n        \"content_type\": 0,\n        \"content_url\": \"http://localhost:8080/test.mp4\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:4009/courses/1/sections/1/lectures",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4009",
+											"path": [
+												"courses",
+												"1",
+												"sections",
+												"1",
+												"lectures"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "get all sections for course",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -357,7 +446,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": \"Ruby on Rails Course\",\n    \"course_id\": 1,\n    \"author_id\": 18,\n    \"createdby_id\": 18,\n    \"updatedby_id\": 18,\n    \"description\": \"Comprehensive Ruby on Rails Course\"\n  }",
+									"raw": "{\n    \"section\": {\n        \"title\": \"Introduction and setup\",\n        \"course_id\": 1,\n        \"description\": \"Comprehensive Ruby on Rails Course\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -410,7 +499,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Ruby on Rails Course\",\n    \"ispaid_course\": false,\n    \"primarycategory_id\": 1,\n    \"primarysubcategory_id\": 2,\n    \"author_id\": 18,\n    \"instruction_level\": \"simple\",\n    \"published_time\": \"2024-12-12\",\n    \"description\": \"Comprehensive Ruby on Rails Course\",\n    \"contentinfo\": \"2 Hours 10 mins\"\n  }",
+							"raw": "{\n    \"title\": \"React Native Course\",\n    \"ispaid_course\": false,\n    \"primarycategory_id\": 1,\n    \"primarysubcategory_id\": 2,\n    \"author_id\": 2,\n    \"instruction_level\": \"simple\",\n    \"published_time\": \"2025-01-01\",\n    \"description\": \"Comprehensive React Native Course\",\n    \"contentinfo\": \"2 Hours 10 mins\"\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -426,6 +515,106 @@
 							"port": "4009",
 							"path": [
 								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-request-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"React Native Course For beginer\",\n    \"ispaid_course\": false,\n    \"ispracticetest_course\": null,\n    \"imagethumbnail\": null,\n    \"imagelarge\": null,\n    \"no_of_subscribers\": null,\n    \"rating\": null,\n    \"no_of_reviews\": null,\n    \"no_of_published_lectures\": null,\n    \"description\": \"Comprehensive React Native Course\",\n    \"primarycategory_id\": 1,\n    \"primarysubcategory_id\": 2,\n    \"is_course_completion\": null,\n    \"instruction_level\": \"simple\",\n    \"published_time\": \"2025-01-01\",\n    \"contentinfo\": \"2 Hours 10 mins\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4009/courses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4009",
+							"path": [
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-request-id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lecture\": {\n        \"title\": \"Course structure, overview and bestway to use this course\",\n        \"content_type\": 0,\n        \"content_url\": \"http://localhost:8080/test.mp4\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4009/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4009",
+							"path": [
+								"courses",
+								"1"
 							]
 						}
 					},

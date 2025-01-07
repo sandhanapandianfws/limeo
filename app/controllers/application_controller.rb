@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_request
   before_action :set_locale
 
-  private
     def authenticate_request
       header = request.headers['Authorization']
       token = header.split(' ').last if header

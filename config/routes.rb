@@ -1,6 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+
+  root to: 'home#index'
+
+  get 'home/index'
   get 'course_subscriptions/subscribe'
   get 'course_subscriptions/unsubscribe'
   get 'course_subscriptions/subscribers'

@@ -2,11 +2,11 @@ class CoursesController < ApplicationController
 
   protect_from_forgery with: :null_session
 
+  before_action :authenticate_request
+
   before_action :set_course, only: %i[show update destroy create_section get_sections]
 
   before_action :set_section, only: %i[create_lecture destroy_section]
-
-  before_action :authenticate_request
 
   # GET /courses
   def index
@@ -74,6 +74,8 @@ class CoursesController < ApplicationController
 
   # GET /courses/:course_id/sections
   def get_sections
+
+    p 'Get sections - ', @current_user
     sections = @course.sections
     render json: sections, status: :ok
   end
@@ -105,6 +107,7 @@ class CoursesController < ApplicationController
 
   # Find course by ID
   def set_course
+    p 'Get sections - ', @current_user
     @course = Course.find_by(id: params[:id])
     render json: { error: 'Course not found' }, status: :not_found unless @course
   end

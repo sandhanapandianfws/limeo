@@ -1,0 +1,8 @@
+<h1>Course Details</h1>
+
+<p><strong>Title:</strong> <%= @m_course.title %></p>
+<p><strong>Description:</strong> <%= @m_course.description %></p>
+<p><strong>Created At:</strong> <%= @m_course.created_at %></p>
+<p><strong>Updated At:</strong> <%= @m_course.updated_at %></p>
+
+<%= link_to 'Back to Courses', m_courses_path, class: 'btn btn-secondary' %>

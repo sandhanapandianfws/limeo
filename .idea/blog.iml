@@ -40,23 +40,35 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v6.1.7.8, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.1.7.8, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.7, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v10.4.19.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="base64 (v0.2.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.20, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.18.4, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap (v5.3.3, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.3.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.17.2, rbenv: 2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v11.1.3, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v3.36.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v4.1.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chronic (v0.10.2, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.3.4, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.4.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.4.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="elasticsearch (v7.17.11, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="elasticsearch-api (v7.17.11, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="elasticsearch-model (v7.2.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="elasticsearch-rails (v7.2.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="elasticsearch-transport (v7.17.11, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.10.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday (v2.8.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday-net_http (v3.0.2, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.17.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashie (v5.0.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.6, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.13.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jwt (v2.9.3, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
@@ -70,6 +82,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.8.8, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.25.4, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.7.5, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.15.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.5.2, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-imap (v0.3.7, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-pop (v0.1.2, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
@@ -78,6 +91,7 @@
     <orderEntry type="library" scope="PROVIDED" name="net-telnet (v0.1.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.4, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.10, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="popper_js (v2.11.8, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v5.1.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.6.9, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.8.1, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
@@ -104,6 +118,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.13.2, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rswag-api (v2.16.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rswag-ui (v2.16.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby2_keywords (v0.0.5, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v6.0.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
@@ -125,6 +140,7 @@
     <orderEntry type="library" scope="PROVIDED" name="webpacker (v5.4.4, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.6, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="whenever (v1.0.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.18, rbenv: 2.6.9 [testblog], testblog) [gem]" level="application" />
   </component>
@@ -421,6 +437,11 @@
               <RakeTaskImpl description="Load asset compile environment" fullCommand="assets:environment" id="environment" />
               <RakeTaskImpl description="Compile all the assets named in config.assets.precompile" fullCommand="assets:precompile" id="precompile" />
               <RakeTaskImpl description="" fullCommand="assets:clean" id="clean" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="autoprefixer">
+            <subtasks>
+              <RakeTaskImpl description="Show selected browsers and prefixed CSS properties and values" fullCommand="autoprefixer:info" id="info" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl id="cache_digests">

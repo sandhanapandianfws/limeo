@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_01_053527) do
+ActiveRecord::Schema.define(version: 2025_01_07_214823) do
 
   create_table "articles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -74,6 +74,17 @@ ActiveRecord::Schema.define(version: 2025_01_01_053527) do
     t.index ["primarycategory_id"], name: "index_courses_on_primarycategory_id"
     t.index ["primarysubcategory_id"], name: "index_courses_on_primarysubcategory_id"
     t.index ["updatedby_id"], name: "index_courses_on_updatedby_id"
+  end
+
+  create_table "exams", charset: "utf8mb3", force: :cascade do |t|
+    t.string "title"
+    t.string "subject"
+    t.integer "total_marks"
+    t.datetime "start_time"
+    t.integer "duration"
+    t.datetime "end_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "lectures", charset: "utf8mb3", force: :cascade do |t|

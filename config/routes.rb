@@ -2,15 +2,18 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
 
-  root to: 'home#index'
-
-  get 'home/index'
-  get 'course_subscriptions/subscribe'
-  get 'course_subscriptions/unsubscribe'
-  get 'course_subscriptions/subscribers'
   mount Rswag::Ui::Engine => '/api-docs'
 
   mount Sidekiq::Web => '/sidekiq'
+
+  root to: 'home#index'
+
+  get 'home/index'
+
+  get 'about', to: 'home#about'
+
+  # Elastic Search API
+  get 'courses/search', to: 'courses#search'
 
   resources :courses, only: [:show, :create, :update, :destroy] do
     member do
@@ -33,10 +36,25 @@ Rails.application.routes.draw do
 
   resources :categories
 
+
+  # Course Subscription
+  get 'course_subscriptions/subscribe'
+  get 'course_subscriptions/unsubscribe'
+  get 'course_subscriptions/subscribers'
+
+  # ExamsMVCController
+  get 'exams/index'
+  get 'exams/show'
+  get 'exams/new'
+  get 'exams/create'
+  get 'exams/edit'
+  get 'exams/update'
+  # delete 'exams/destroy', to: 'exams#destroy'
+  resources :exams
+
+  # API User Login, Register and VerifyEmail
   post 'users/login', to: 'users#login'
-
   post 'users/register', to: 'users#register'
-
   get '/users/verifyEmail', to: 'users#verify_email'
 
 end

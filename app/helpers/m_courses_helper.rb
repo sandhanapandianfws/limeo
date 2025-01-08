@@ -1,0 +1,2 @@
+module MCoursesHelper
+end

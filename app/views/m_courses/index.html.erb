@@ -1,0 +1,29 @@
+<h1>MCourses List</h1>
+<%= link_to 'Add New Course', new_m_course_path, class: 'btn btn-primary' %>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Author</th>
+    <th>Rating</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @m_courses.each do |course| %>
+    <tr>
+      <td><%= course.title %></td>
+      <td><%= course.description %></td>
+      <td><%= course.author %></td>
+      <td><%= course.rating %></td>
+      <td>
+        <%= link_to 'Edit', m_course_path(id: course.id), class: 'btn btn-warning' %>
+
+        <%= link_to 'Delete', m_course_path(id: course.id), method: :delete, data: { confirm: 'Are you sure?', turbolinks: false }, class: 'btn btn-danger'  %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

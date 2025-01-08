@@ -20,6 +20,11 @@ class CoursesController < ApplicationController
     render json: @course
   end
 
+  # GET /courses/:id
+  def search
+    render json: Course.search(params[:name]);
+  end
+
   # POST /courses
   def create
     user = User.find_by(id: course_params[:author_id])

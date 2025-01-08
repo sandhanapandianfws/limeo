@@ -1,0 +1,71 @@
+
+<div class="container-xxl flex-grow-1 container-p-y">
+  <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Exams/</span> Create Exam</h4>
+
+  <!-- Basic Layout & Basic with Icons -->
+  <div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+      <div class="card mb-4">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <h5 class="mb-0">Create New Exam</h5>
+          <small class="text-muted float-end">Exam short description</small>
+        </div>
+        <div class="card-body">
+
+          <%= form_with model: @exam, local: true do |form| %>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="exam-title">Title</label>
+              <div class="col-sm-10">
+                <%= form.text_field :title, class: 'form-control', id: 'exam-title', placeholder: 'Internal Exam 1' %>
+
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="exam-subject">Subject</label>
+              <div class="col-sm-10">
+                <%= form.text_field :subject, class: 'form-control', id: 'exam-subject', placeholder: 'Discrete maths' %>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="exam-marks">Total Marks</label>
+              <div class="col-sm-10">
+                <%= form.number_field :total_marks , class: 'form-control', id: 'exam-marks', placeholder: '100'%>
+                <div class="form-text">numbers</div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="exam-starttime">Exam start date & time</label>
+              <div class="col-sm-10">
+
+                <%= form.datetime_select :start_time , class: 'form-control', id: 'exam-starttime'%>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="exam-duration">Duration (in mins)</label>
+              <div class="col-sm-10">
+
+                <%= form.number_field :duration , class: 'form-control', id: 'exam-duration', placeholder: '10 minutes'%>
+                <div class="form-text">numbers</div>
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-sm-10">
+
+                <div class="mt-4">
+
+                  <%= form.submit 'Save', class: 'btn btn-primary' %>
+
+                  <%= link_to 'Cancel', exams_path, class: 'btn btn-outline-secondary' %>
+                </div>
+
+              </div>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

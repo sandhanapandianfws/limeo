@@ -16,7 +16,6 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    p category_params
     category = Category.new(category_params)
     if category.save
       render json: category, status: :created

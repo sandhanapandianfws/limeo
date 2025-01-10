@@ -52,6 +52,13 @@ Rails.application.routes.draw do
   # delete 'exams/destroy', to: 'exams#destroy'
   resources :exams
 
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
+  get '/register', to: 'sessions#register'
+  post '/register', to: 'sessions#create_user'
+
   # API User Login, Register and VerifyEmail
   post 'users/login', to: 'users#login'
   post 'users/register', to: 'users#register'

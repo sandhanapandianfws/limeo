@@ -18,9 +18,9 @@ ta:
         usertype: "பயனர் வகை காலியாக இருக்கக்கூடாது"
       dberror:
         duplicate:
-          email: "Email already exists"
+          email: "மின்னஞ்சல் ஏற்கனவே உள்ளது"
           unique_violation: "Unique constraint violated"
-      unexpected_error: "Something went wrong"
+      unexpected_error: "ஏதோ தவறாகிவிட்டது"
     verify_email:
       error:
         code_missing: "சரிபார்ப்புக் குறியீடு இல்லை"

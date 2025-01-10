@@ -30,13 +30,13 @@ class ApplicationController < ActionController::Base
 
 
   private
+  before_action :set_locale
 
   def set_locale
     I18n.locale = extract_locale_from_header || I18n.default_locale
   end
 
   def extract_locale_from_header
-    p I18n.available_locales
     locale = request.headers['Accept-Language']&.scan(/^[a-z]{2}/)&.first
     I18n.available_locales.map(&:to_s).include?(locale) ? locale : nil
   end
